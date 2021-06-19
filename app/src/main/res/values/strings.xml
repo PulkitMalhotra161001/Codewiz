@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Codewiz</string>
     <string name="no">no</string>
-    <string name="hello_mai_dekh_raha_hu">Hello mai dekh raha hu</string>
+    <string name="hello_mai_dekh_raha_hu">Coding Questions</string>
     <string name="yes">yes</string>
     <string name="todo">A coding image</string>
+    <string name="restart">⟲</string>
+    <string name="your_score">Your score</string>
 </resources>
