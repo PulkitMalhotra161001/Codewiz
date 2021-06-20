@@ -26,8 +26,6 @@ public class MainActivity extends AppCompatActivity {
     private int index=0;
     Button yes,no,again;
 
-//    Button no;
-//    Button again;
     TextView question,point;
     TextView tick,cross;
     @Override
@@ -48,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
         yes.setVisibility(View.VISIBLE);
         no.setVisibility(View.VISIBLE);
         point.setVisibility(View.INVISIBLE);
-//        tick.setVisibility(View.INVISIBLE);
-//        cross.setVisibility(View.INVISIBLE);
 
 
 
@@ -113,11 +109,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void againClicked(View v) {
         Intent intent=new Intent(this,MainActivity.class);
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
         startActivity(intent);
-
-//        onRestart();
-//        onStart();
     }
 }
