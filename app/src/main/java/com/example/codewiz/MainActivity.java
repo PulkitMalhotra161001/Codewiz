@@ -53,14 +53,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        AlphaAnimation fadeIn = new AlphaAnimation(0.0f , 1.0f ) ;
-//        AlphaAnimation fadeOut = new AlphaAnimation( 1.0f , 0.0f ) ;
-//        fadeIn.setDuration(100);
-//        fadeIn.setFillAfter(true);
-//
-//        fadeOut.setDuration(100);
-//        fadeOut.setFillAfter(true);
-//        fadeOut.setStartOffset(800+fadeIn.getStartOffset());
+        AlphaAnimation fadeIn = new AlphaAnimation(0.0f , 1.0f ) ;
+        AlphaAnimation fadeOut = new AlphaAnimation( 1.0f , 0.0f ) ;
+        fadeIn.setDuration(1200);
+        fadeIn.setFillAfter(true);
+
+        fadeOut.setDuration(1200);
+        fadeOut.setFillAfter(true);
+        fadeOut.setStartOffset(4200+fadeIn.getStartOffset());
 
         question=findViewById(R.id.question);
         question.setText(questions[index]);
@@ -72,7 +72,9 @@ public class MainActivity extends AppCompatActivity {
 
                 index++;
                 if(index<questions.length){
+                    question.startAnimation(fadeOut);
                     question.setText(questions[index]);
+                    question.startAnimation(fadeIn);
                 }
                 else{
                     yes.setVisibility(View.INVISIBLE);
@@ -92,7 +94,9 @@ public class MainActivity extends AppCompatActivity {
                     score++;
                 index++;
                 if(index<questions.length){
+                    question.startAnimation(fadeOut);
                     question.setText(questions[index]);
+                    question.startAnimation(fadeIn);
                 }
                 else{
                     yes.setVisibility(View.INVISIBLE);
@@ -109,6 +113,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void againClicked(View v) {
         Intent intent=new Intent(this,MainActivity.class);
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_main);
         startActivity(intent);
+
+//        onRestart();
+//        onStart();
     }
 }
